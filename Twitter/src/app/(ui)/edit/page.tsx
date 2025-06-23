@@ -108,7 +108,7 @@ export default function Page() {
 
         try {
 
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/update/${userId}`, {
+            const response = await fetch(`https://rede-social-2.onrender.com/redes/update/${userId}`, {
                 method: "PATCH",
                 headers: {
                     'Authorization': `Bearer ${removerAspas(tk)}`

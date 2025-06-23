@@ -59,7 +59,7 @@ export default function Page() {
 
 
                             try {
-                                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/posts/usuario/${id}`, {
+                                const response = await fetch(`https://rede-social-2.onrender.com/redes/posts/usuario/${id}`, {
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${removerAspas(tk)}`
@@ -80,7 +80,7 @@ export default function Page() {
                             }
 
                             try {
-                                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/seguidores/${id}`, {
+                                const response = await fetch(`https://rede-social-2.onrender.com/redes/seguidores/${id}`, {
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${removerAspas(tk)}`
@@ -120,7 +120,7 @@ export default function Page() {
                     }
                                 
                     try {
-                        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/seguir/${userId}/${id}`, {
+                        const response = await fetch(`https://rede-social-2.onrender.com/redes/seguir/${userId}/${id}`, {
                             method: 'POST',
                             headers: {
                                 'Authorization': `Bearer ${removerAspas(String(token))}`,
@@ -154,7 +154,7 @@ export default function Page() {
                     }
                                 
                     try {
-                        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/unfollow/${userId}/${id}`, {
+                        const response = await fetch(`https://rede-social-2.onrender.com/redes/unfollow/${userId}/${id}`, {
                             method: 'DELETE',
                             headers: {
                                 'Authorization': `Bearer ${removerAspas(String(token))}`,
