@@ -80,15 +80,7 @@ export default function Layout({ children }: Props) {
                                 icon={faHouse}
                                 label="Página inicial"
                             />
-                        </Link>
-
-                        <Link href={`/usuarios/${idUser}`}>
-                            <NavItem
-                                icon={faUser}
-                                label="Meu perfilll"
-                            />
-                        </Link>
-
+                        </Link>                  
 
 
                         <Link href="/notificacoes" className="relative flex items-center">
