@@ -107,39 +107,6 @@ export default function Page() {
                 }, []);
     
 
-                const FollowButton = async () => {
-
-
-
-                    const userId = localStorage.getItem('id-usuario');
-                    const token = localStorage.getItem('token-usuario');
-
-                
-                    if (!userId || !token) {
-                        return;
-                    }
-                                
-                    try {
-                        const response = await fetch(`https://rede-social-2.onrender.com/redes/seguir/${userId}/${id}`, {
-                            method: 'POST',
-                            headers: {
-                                'Authorization': `Bearer ${removerAspas(String(token))}`,
-                            },
-                        });
-                
-                        if (response.ok) {
-                            alert(`Você esta seguindo esse usuário `);
-
-                            const data = await response.text();
-                            location.reload();
-
-                        } else {
-                        }
-                    } catch (error) {
-                        console.error('Houve algum erro:', error);
-                    }
-                };
-
                 const unFollowButton = async () => {
 
 
@@ -201,9 +168,7 @@ export default function Page() {
             />
 
             <div className=' flex flex-col gap-3'>
-            <div className="w-32">
-                <Button label={"Seguir"} size={2} onClick={FollowButton} />                           
-            </div>
+   
             <div className="w-32">
                 <Button label="onfollow" size={2} onClick={unFollowButton} />                           
             </div>
@@ -252,7 +217,7 @@ export default function Page() {
      
                                      </div> 
                                  <div className="mt-4 text-white break-words w-full max-w-full">
-                                     {post.conteudo} sdsds
+                                     {post.conteudo} 
                                  </div>
                              </div>
                                  <Image
