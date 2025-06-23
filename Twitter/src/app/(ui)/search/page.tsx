@@ -41,7 +41,7 @@ export default function Page({ searchParams }: Props) {
 
             try {
                 
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/search/${q}`, {
+                const response = await fetch(`https://rede-social-2.onrender.com/redes/search/${q}`, {
                     headers: {
                         'Authorization': `Bearer ${removerAspas(token)}`
                     }

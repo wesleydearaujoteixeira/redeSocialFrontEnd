@@ -35,7 +35,7 @@ export default function Page() {
                             if (!tk || userId === null) return;
             
                             try {
-                                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/user/${id}`, {
+                                const response = await fetch(`https://rede-social-2.onrender.com/redes/user/${id}`, {
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${removerAspas(tk)}`

@@ -39,7 +39,7 @@ export default function Page() {
            if(deletar){
             try {
                 
-                const response = await fetch(`https://rede-social-1vg1.onrender.com/redes/delete/post/${id}/${userId}`, {
+                const response = await fetch(`https://rede-social-2.onrender.com/redes/delete/post/${id}/${userId}`, {
                     method: "DELETE",
                     headers: {
                         'Authorization': `Bearer ${removerAspas(String(token))}`

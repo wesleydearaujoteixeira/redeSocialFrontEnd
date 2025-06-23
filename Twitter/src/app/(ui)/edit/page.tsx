@@ -39,7 +39,7 @@ export default function Page() {
         if (tk && userId) {
             const fetchUser = async () => {
                 try {
-                    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/user/${userId}`, {
+                    const response = await fetch(`https://rede-social-2.onrender.com/redes/user/${userId}`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',

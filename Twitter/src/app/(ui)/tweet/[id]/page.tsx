@@ -28,7 +28,7 @@ export default function Page() {
 
   const fetchPost = async (token: string) => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/get/${id}`, {
+      const response = await fetch(`https://rede-social-2.onrender.com/redes/get/${id}`, {
         method: "GET",
         headers: {
           'Authorization': `Bearer ${token}`
@@ -43,7 +43,7 @@ export default function Page() {
 
   const fetchComentarios = async (token: string) => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/comentario/${id}`, {
+      const response = await fetch(`https://rede-social-2.onrender.com/redes/comentario/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -73,7 +73,7 @@ export default function Page() {
     }
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/comentario/${usuarioId}/${id}`, {
+      const response = await fetch(`https://rede-social-2.onrender.com/redes/comentario/${usuarioId}/${id}`, {
         method: "POST",
         headers: {
           'Authorization': `Bearer ${removerAspas(String(tk))}`,
@@ -112,7 +112,7 @@ export default function Page() {
     }
 
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/respostas/${userId}/${idComentario}`, {
+    const response = await fetch(`https://rede-social-2.onrender.com/redes/respostas/${userId}/${idComentario}`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ export default function Page() {
     }
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/respostas/${commentId}`, {
+      const response = await fetch(`https://rede-social-2.onrender.com/redes/respostas/${commentId}`, {
         method: "GET",
         headers: {
           'Authorization': `Bearer ${removerAspas(String(tk))}`
@@ -190,7 +190,7 @@ export default function Page() {
 
       try {
 
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/delete/comentario/${commentId}/${userId}`, {
+        const response = await fetch(`https://rede-social-2.onrender.com/redes/delete/comentario/${commentId}/${userId}`, {
             method: "DELETE",
             headers: {
               'Authorization': `Bearer ${removerAspas(String(token))}`

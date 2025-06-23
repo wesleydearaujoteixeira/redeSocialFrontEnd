@@ -31,7 +31,7 @@ export const TweetPost = () => {
                 if (!tk || userId === null) return;
 
                 try {
-                    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/user/${Number(userId)}`, {
+                    const response = await fetch(`https://rede-social-2.onrender.com/redes/user/${Number(userId)}`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'Application/json',
@@ -84,7 +84,7 @@ export const TweetPost = () => {
         }
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/post/create`, {
+            const response = await fetch(`https://rede-social-2.onrender.com/redes/post/create`, {
                 method: "POST",
                 headers: {
                     'Authorization': `Bearer ${removerAspas(token)}` // Envia o token para autenticação

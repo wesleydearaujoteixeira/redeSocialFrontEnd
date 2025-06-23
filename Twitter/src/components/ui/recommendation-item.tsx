@@ -26,7 +26,7 @@ export const RecommendationItem = ({ user }: Props) => {
 
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/seguir/${userId}/${id}`, {
+            const response = await fetch(`https://rede-social-2.onrender.com/redes/seguir/${userId}/${id}`, {
                 method: "POST",
                 headers: {
                     'Authorization': `Bearer ${removerAspas(String(token))}`

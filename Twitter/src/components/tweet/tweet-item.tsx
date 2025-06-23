@@ -41,7 +41,7 @@ export const TweetItem = () => {
     console.log(" id da postagem " + postId)
     try{
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/like/${postId}/${id}`, {
+      const response = await fetch(`https://rede-social-2.onrender.com/redes/like/${postId}/${id}`, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${removerAspas(String(tk))}`
@@ -70,7 +70,7 @@ export const TweetItem = () => {
 
   const fetchPosts = async (token: string) => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/all`, {
+      const response = await fetch(`https://rede-social-2.onrender.com/redes/all`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
