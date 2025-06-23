@@ -1,4 +1,4 @@
-// File: C:\Users\wesle\social\Twitter\src\app\(ui)\home\page.tsx
+// File: C:\Users\wesle\Desktop\social_mediatic\redeSocialFrontEnd\Twitter\src\app\(ui)\home\page.tsx
 import * as entry from '../../../../../src/app/(ui)/home/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
