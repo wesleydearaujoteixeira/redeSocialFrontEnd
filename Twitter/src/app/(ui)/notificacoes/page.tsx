@@ -31,7 +31,7 @@ const page = () => {
 
       try {
 
-        const response = await fetch(`https://rede-social-1vg1.onrender.com/redes/notificando/usuario/${userId}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/notificando/usuario/${userId}`, {
           headers: {
             'Authorization': `Bearer ${removerAspas(String(token))}`,
             'Content-Type': 'application/json'

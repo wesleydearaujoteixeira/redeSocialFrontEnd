@@ -30,7 +30,7 @@ export const SignupForm = () => {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/redes/create`,
+        `https://rede-social-2.onrender.com/redes/create`,
         {
           method: "POST",
           body: formData,
