@@ -48,7 +48,7 @@ export default function Layout({ children }: Props) {
     
           try {
     
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/notificando/usuario/${userId}`, {
+            const response = await fetch(`https://rede-social-2.onrender.com/redes/notificando/usuario/${userId}`, {
               headers: {
                 'Authorization': `Bearer ${removerAspas(String(token))}`,
                 'Content-Type': 'application/json'

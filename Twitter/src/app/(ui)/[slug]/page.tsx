@@ -81,7 +81,7 @@ export default function Page() {
 
 
                                 try {
-                                        const response = await fetch(`https://rede-social-1vg1.onrender.com/redes/posts/usuario/${userId}`, {
+                                        const response = await fetch(`https://rede-social-2.onrender.com/redes/posts/usuario/${userId}`, {
                                                             method: 'GET',
                                                             headers: {
                                                                 'Authorization': `Bearer ${removerAspas(tk)}`
@@ -103,7 +103,7 @@ export default function Page() {
                                                     }
         
                         try {
-                            const response = await fetch(`https://rede-social-1vg1.onrender.com/redes/user/${userId}`, {
+                            const response = await fetch(`https://rede-social-2.onrender.com/redes/user/${userId}`, {
                                 method: 'GET',
                                 headers: {
                                     'Authorization': `Bearer ${removerAspas(tk)}`
@@ -125,7 +125,7 @@ export default function Page() {
 
 
                        try {
-                        const res = await fetch(`https://rede-social-1vg1.onrender.com/redes/seguindo/${userId}`, {
+                        const res = await fetch(`https://rede-social-2.onrender.com/redes/seguindo/${userId}`, {
                             method: 'GET',
                             headers: {
                               'Authorization': `Bearer ${removerAspas(tk)}`
@@ -146,7 +146,7 @@ export default function Page() {
 
 
                        try {
-                        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/seguidores/${userId}`, {
+                        const res = await fetch(`https://rede-social-2.onrender.com/redes/seguidores/${userId}`, {
                             method: 'GET',
                             headers: {
                               'Authorization': `Bearer ${removerAspas(tk)}`
