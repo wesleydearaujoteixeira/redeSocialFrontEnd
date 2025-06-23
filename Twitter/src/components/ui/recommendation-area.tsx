@@ -29,7 +29,7 @@ export const RecommendationArea = () => {
                     if (!tk || userId === null) return;
     
                     try {
-                        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/redes/sugestoes/${userId}`, {
+                        const response = await fetch(`https://rede-social-2.onrender.com/redes/sugestoes/${userId}`, {
                             method: 'GET',
                             headers: {
                                 'Content-Type': 'Application/json',
