@@ -73,32 +73,30 @@ export default function Page() {
                 setUserId(id);
             }, []);
             
-            // Carregar informações do usuário
             useEffect(() => {
                 if (tk && userId !== null) {
                     const fetchUser = async () => {
                         if (!tk || userId === null) return;
 
-
-                                try {
+                                    try {
                                         const response = await fetch(`https://rede-social-2.onrender.com/redes/posts/usuario/${userId}`, {
-                                                            method: 'GET',
-                                                            headers: {
-                                                                'Authorization': `Bearer ${removerAspas(tk)}`
-                                                            },
-                                                        });
+                                                    method: 'GET',
+                                                    headers: {
+                                                            'Authorization': `Bearer ${removerAspas(tk)}`
+                                                        },
+                                                    });
                         
                                                     
                                     
-                                                        if (!response.ok) {
-                                                            console.error(`Erro HTTP ah pór favor né  ${response.status}`);
-                                                            return;
-                                                        }
+                                                    if (!response.ok) {
+                                                        console.error(response.status);
+                                                        return;
+                                                    }
                                     
-                                                        const data = await response.json();
+                                                    const data = await response.json();
                                                         setPosts(data);
                                                     } catch (error) {
-                                                        console.log(error, " Houve um erro ai na requisição... ")
+                                                        console.log(error, " Houve um erro  no get das postagens ")
                                                     }
         
                         try {
@@ -110,15 +108,14 @@ export default function Page() {
                             });
         
                             if (!response.ok) {
-                                console.error(`Erro HTTP ah pór favor né  ${response.status}`);
+                                console.error(` ${response.status}`);
                                 return;
                             }
         
                             const data = await response.json();
-                            console.log(data);
                             setUser(data);
                         } catch (err) {
-                            console.error('Erro na requisição:', err);
+                            console.error('Erro no carregamento do usuário:', err);
                             
                         }
 
@@ -152,7 +149,7 @@ export default function Page() {
                           });
                     
                           if (!res.ok) {
-                            console.error(`Erro Http: ${res.status}`);
+                            console.error(res.status);
                             return;
                           }
                     
