@@ -139,7 +139,7 @@ export const TweetItem = () => {
                       />
                   </Link>
                 )}
-                <div className="flex items-center justify-center mt-4 text-gray-500 w-[40%] mx-auto">
+                <div className="flex items-center justify-center mt-4 text-gray-500 w-[50%] mx-auto">
                     <div className="flex-1">
                       <Link href={`/tweet/${post.id}`}>
                         <div className="inline-flex items-center gap-2 cursor-pointer">
@@ -166,9 +166,7 @@ export const TweetItem = () => {
           </div>
 
 
-      <div className="block md:hidden mt-5">
-        <RecommendationArea />
-      </div>
+    
 
       </div>
       )}
