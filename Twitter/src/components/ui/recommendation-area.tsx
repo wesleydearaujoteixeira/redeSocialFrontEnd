@@ -54,7 +54,7 @@ export const RecommendationArea = () => {
     return (
         <div className="bg-gray-700 rounded-3xl  h-[150px] lg:h-[400px] ">
             <h2 className="text-xl p-3">Quem seguir</h2>
-            <div className="overflow-y-auto flex md:flex-col">
+            <div className="flex-col">
                 {user && user.map((usuario) => {
                 return (
                     <div key={usuario.id}>
