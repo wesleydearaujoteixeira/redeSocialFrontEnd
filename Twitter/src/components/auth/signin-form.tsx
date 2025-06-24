@@ -35,7 +35,7 @@ export const SigninForm = () => {
             }
         } catch (error) {
             console.error('Erro na requisição:', error);
-            alert('Erro na requisição');
+            alert('Erro ao logar, verifique seu email e senha');
         }
     }
 

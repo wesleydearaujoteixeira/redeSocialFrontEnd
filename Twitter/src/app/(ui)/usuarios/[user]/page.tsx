@@ -135,6 +135,7 @@ export default function Page() {
             )}
 
             <div className="-mt-12 flex justify-between items-end px-6">
+
               {user.imagemPerfilUrl && (
                 <img
                   src={user.imagemPerfilUrl}
@@ -181,12 +182,15 @@ export default function Page() {
                 <div className="flex flex-col gap-3 text-sm text-white font-bold mb-1">
                   <div className="text-white gap-5">
                     <div className="flex items-center gap-3">
+                      
                       {post.usuario?.imagemPerfilUrl && (
                         <img
                           src={post.usuario.imagemPerfilUrl}
                           alt={post.usuario.nome}
                           className='rounded-full h-[40px] w-[40px]'
                         />
+
+                        
                       )}
                       <h2 className="text-yellow-300">{post.usuario.nome}</h2>
                     </div>

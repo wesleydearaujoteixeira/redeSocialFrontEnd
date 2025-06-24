@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export const TweetPost = () => {
     const [postContent, setPostContent] = useState<string>('');  // Para armazenar o conteúdo do post
-    const [image, setImage] = useState<File | null>(null); // Para armazenar a imagem
+    let [image, setImage] = useState<File | any>(); // Para armazenar a imagem
     const [tk, setTk] = useState<string | null>(null);
     const [userId, setUserId] = useState<string | null>(null);
     const [user, setUser] = useState<User>();
@@ -81,7 +81,9 @@ export const TweetPost = () => {
         formData.append("usuarioId", String(userId));
         if (image) {
             formData.append("imagem", image); // Adiciona a imagem se houver
-        }
+        }else{
+                image = ""
+            }
 
         try {
             const response = await fetch(`https://rede-social-2.onrender.com/redes/post/create`, {
