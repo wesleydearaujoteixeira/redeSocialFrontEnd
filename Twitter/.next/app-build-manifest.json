@@ -21,15 +21,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(ui)/layout.js"
     ],
+    "/(ui)/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(ui)/[slug]/page.js"
+    ],
     "/(auth)/signin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(auth)/signin/page.js"
     ],
-    "/_not-found/page": [
+    "/(ui)/usuarios/[user]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/(ui)/usuarios/[user]/page.js"
     ]
   }
 }

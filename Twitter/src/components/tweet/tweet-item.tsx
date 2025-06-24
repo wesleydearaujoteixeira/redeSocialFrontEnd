@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { RecommendationArea } from "../ui/recommendation-area";
 
 
 export const TweetItem = () => {
@@ -108,8 +109,8 @@ export const TweetItem = () => {
           <h3 className="text-md font-semibold mb-3 text-white">Outros Posts</h3>
           <div className="space-y-4">
             {posts.map((post) => (
-              <div key={post.id} className="p-4 bg-gray-800 rounded-lg">
-                <div className="flex items-center gap-3 text-sm text-white font-bold mb-1">
+              <div key={post.id} className="p-4 bg-gray-800 rounded-lg ">
+                <div className="flex items-center gap-3 text-sm text-white font-bold mb-1  ">
                   <Link href={`usuarios/${post.usuario.id}`}> 
                   <Image
                     src={post.usuario.imagemPerfilUrl}
@@ -163,8 +164,15 @@ export const TweetItem = () => {
               </div>
             ))}
           </div>
+
         </div>
       )}
+
+      <div className="block md:hidden mt-10">
+        <RecommendationArea />
+      </div>
+
+
     </div>
   );
 };

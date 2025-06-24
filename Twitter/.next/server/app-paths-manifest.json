@@ -1,7 +1,6 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/(auth)/signin/page": "app/(auth)/signin/page.js",
-  "/(ui)/home/page": "app/(ui)/home/page.js"
+  "/(ui)/[slug]/page": "app/(ui)/[slug]/page.js",
+  "/(ui)/home/page": "app/(ui)/home/page.js",
+  "/(ui)/usuarios/[user]/page": "app/(ui)/usuarios/[user]/page.js"
 }

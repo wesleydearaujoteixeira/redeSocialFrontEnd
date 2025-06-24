@@ -52,9 +52,10 @@ export const RecommendationArea = () => {
             }
         }, [tk, userId]);
     return (
-        <div className="bg-gray-700 rounded-3xl h-[400px] overflow-y-auto">
+        <div className="bg-gray-700 rounded-3xl  h-[150px] lg:h-[400px] ">
             <h2 className="text-xl p-6">Quem seguir</h2>
-            {user && user.map((usuario) => {
+            <div className="overflow-y-auto flex md:flex-col overflow-x-auto md:overflow-visible space-x-4 md:space-x-0 md:space-y-4 px-2 snap-x snap-mandatory">
+                {user && user.map((usuario) => {
                 return (
                     <div key={usuario.id}>
                         <div className="flex flex-col gap-4 p-6 pt-0" >
@@ -64,8 +65,7 @@ export const RecommendationArea = () => {
                     </div>
                 )
             })}
-            <RecommendationItemSkeleton />
-
+            </div>
         </div>
     );
 }

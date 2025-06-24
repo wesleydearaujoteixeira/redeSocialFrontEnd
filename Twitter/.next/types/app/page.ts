@@ -1,4 +1,4 @@
-// File: C:\Users\wesle\Desktop\social_mediatic\redeSocialFrontEnd\Twitter\src\app\page.tsx
+// File: C:\Users\wesle\Desktop\projetos pessoais_para_portifólio\social_mediatic\redeSocialFrontEnd\Twitter\src\app\page.tsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
