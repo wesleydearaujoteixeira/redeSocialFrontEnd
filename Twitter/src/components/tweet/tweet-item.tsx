@@ -128,7 +128,7 @@ export const TweetItem = () => {
                   <div className="text-white break-words w-full max-w-full">
                     {post.conteudo}
                   </div>
-                {post.imagemUrl && (
+                {post.imagemUrl !== null && (
                   <Link href={`/tweet/${post.id}`}>
                       <Image
                         src={post.imagemUrl}

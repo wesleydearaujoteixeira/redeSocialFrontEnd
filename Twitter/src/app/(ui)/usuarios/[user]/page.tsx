@@ -199,10 +199,19 @@ export default function Page() {
                     </div>
                   </div>
 
-                
+
+                  
+                  {post.imagemUrl === null ? (
+                    <img
+                      src={`${post.imagemUrl}`}         
+                      alt={`Imagem do post de ${post.usuario.nome}`}
+                      className='mt-2 rounded h-[400px] w-[400px]'
+                    />
+
+                  )  : <div> Sem imagem no post </div>   }
 
 
-
+                  
                 </div>
 
                 <div className="flex items-center justify-center mt-4 text-gray-500 w-[50%] mx-auto">

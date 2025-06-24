@@ -253,13 +253,19 @@ export default function Page() {
                                         {post.conteudo}
                                     </div>
                              </div>
-                                 <Image
+
+                                {post.imagemUrl !== null && (
+                                     <Image
                                     src={post.imagemUrl}
                                     alt={post.titulo}
                                     height={400}
                                     width={600}
                                     />
+                                )}
+                                
                             </div>
+
+
             <div className="flex items-center justify-center mt-4 text-gray-500 w-[50%] mx-auto">
                     <div className="flex-1">
                       <Link href={`/tweet/${post.id}`}>
