@@ -8,13 +8,12 @@ import { removerAspas } from "@/app/removeAspas";
 import Image from "next/image";
 
 export const TweetPost = () => {
-    const [postContent, setPostContent] = useState<string>('');  // Para armazenar o conteúdo do post
-    let [image, setImage] = useState<File | any>(); // Para armazenar a imagem
+    const [postContent, setPostContent] = useState<string>('');  
+    let [image, setImage] = useState<File | null>(); 
     const [tk, setTk] = useState<string | null>(null);
     const [userId, setUserId] = useState<string | null>(null);
     const [user, setUser] = useState<User>();
     
-    // Captura do token e ID do usuário
     useEffect(() => {
         const token = localStorage.getItem("token-usuario");
         const id = localStorage.getItem("id-usuario");
@@ -54,15 +53,13 @@ export const TweetPost = () => {
         }
     }, [tk, userId]);
 
-    // Função para capturar o upload da imagem
     const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files ? event.target.files[0] : "ds";
+        const file = event.target.files ? event.target.files[0] : null;
         if (file) {
             setImage(file);
         }
     };
 
-    // Função para enviar o post
     const handlePostClick = async () => {
 
         if (!postContent) {
@@ -81,10 +78,9 @@ export const TweetPost = () => {
         formData.append("usuarioId", String(userId));
         if (image) {
             formData.append("imagem", image); // Adiciona a imagem se houver
-        }else{
-                image = ""
-            }
+        }
 
+        
         try {
             const response = await fetch(`https://rede-social-2.onrender.com/redes/post/create`, {
                 method: "POST",

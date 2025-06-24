@@ -251,14 +251,14 @@ export default function Page() {
                                     </div>
                              </div>
 
-                                {post.imagemUrl !== null ? (
+                                {post.imagemUrl !== null && (
                                      <Image
                                     src={post.imagemUrl}
                                     alt={post.titulo}
                                     height={400}
                                     width={600}
                                     />
-                                ) : <div className="h-[400px] w-[600px]"></div>}
+                                )}
                                 
                             </div>
 
