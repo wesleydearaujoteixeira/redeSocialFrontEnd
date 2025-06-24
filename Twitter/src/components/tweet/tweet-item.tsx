@@ -165,12 +165,15 @@ export const TweetItem = () => {
             ))}
           </div>
 
-        </div>
-      )}
 
       <div className="block md:hidden mt-5">
         <RecommendationArea />
       </div>
+
+      </div>
+      )}
+
+     
 
 
     </div>
