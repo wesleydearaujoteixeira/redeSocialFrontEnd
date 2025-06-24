@@ -161,7 +161,7 @@ export default function Page() {
             {user.link && (
               <div className="flex gap-2 items-center">
                 <FontAwesomeIcon icon={faLink} className="size-5" />
-                <Link href={user.link} target="_blank" className="text-blue-300">{user.link}</Link>
+                <Link href={user.link} target="_blank" className="text-blue-300"> {user.link} </Link>
               </div>
             )}
 
@@ -183,14 +183,14 @@ export default function Page() {
                   <div className="text-white gap-5">
                     <div className="flex items-center gap-3">
                       
-                      {post.usuario?.imagemPerfilUrl && (
+                      {post.usuario.imagemPerfilUrl && (
                         <img
                           src={post.usuario.imagemPerfilUrl}
                           alt={post.usuario.nome}
                           className='rounded-full h-[40px] w-[40px]'
                         />
 
-                        
+
                       )}
                       <h2 className="text-yellow-300">{post.usuario.nome}</h2>
                     </div>
@@ -199,14 +199,10 @@ export default function Page() {
                     </div>
                   </div>
 
-                  {post.imagemUrl && (
-                    <img
-                      src={`${post.imagemUrl}`}         
-                      alt={`Imagem do post de ${post.usuario.nome}`}
-                      className='mt-2 rounded h-[400px] w-[400px]'
-                    />
+                
 
-                  )}
+
+
                 </div>
 
                 <div className="flex items-center justify-center mt-4 text-gray-500 w-[50%] mx-auto">
