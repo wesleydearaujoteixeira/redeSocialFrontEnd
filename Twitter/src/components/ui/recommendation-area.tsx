@@ -52,7 +52,7 @@ export const RecommendationArea = () => {
             }
         }, [tk, userId]);
     return (
-        <div className="bg-gray-700 rounded-3xl  h-[220px] lg:h-[400px] ">
+        <div className="bg-gray-700 rounded-3xl h-[300px] lg:h-[400px] ">
             <h2 className="text-xl p-3">Quem seguir</h2>
             <div className="flex flex-col overflow-y-auto">
                 {user && user.map((usuario) => {
