@@ -96,7 +96,6 @@ export default function Page() {
                                                         }
                                     
                                                         const data = await response.json();
-                                                        console.log(data);
                                                         setPosts(data);
                                                     } catch (error) {
                                                         console.log(error, " Houve um erro ai na requisição... ")
@@ -139,7 +138,6 @@ export default function Page() {
                     
                           const data = await res.json();
                           setSeguidores(data);
-                          console.log(data);
                        } catch (error) {
                             console.log(error);
                        }
@@ -160,7 +158,6 @@ export default function Page() {
                     
                           const data = await res.json();
                           setSeguidos(data);
-                          console.log(data);
                        } catch (error) {
                             console.log(error);
                        }
