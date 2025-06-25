@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { removerAspas } from "@/app/removeAspas";
 import Image from "next/image";
+import Link from "next/link";
 
 export const TweetPost = () => {
     const [postContent, setPostContent] = useState<string>('');  
@@ -111,7 +112,9 @@ export const TweetPost = () => {
         return (
                     <div className="flex gap-6 px-8 py-6 border-b-2 border-gray-900">
             <div className="rounded-full">
-                {user && (
+               <Link href={`/${user?.nome}`}>
+
+                     {user && (
                 <Image
                     src={user.imagemPerfilUrl}
                     width={60}
@@ -120,6 +123,9 @@ export const TweetPost = () => {
                     className="rounded-full object-cover"
                 />
                 )}
+               
+               
+               </Link>
             </div>
 
             <div className="flex-1">
