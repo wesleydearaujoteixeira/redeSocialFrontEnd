@@ -21,15 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(ui)/layout.js"
     ],
-    "/(ui)/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(ui)/[slug]/page.js"
-    ],
     "/(auth)/signin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(auth)/signin/page.js"
+    ],
+    "/(ui)/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(ui)/[slug]/page.js"
     ],
     "/(ui)/usuarios/[user]/page": [
       "static/chunks/webpack.js",

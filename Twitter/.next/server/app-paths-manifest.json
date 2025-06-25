@@ -1,6 +1,6 @@
 {
   "/(auth)/signin/page": "app/(auth)/signin/page.js",
-  "/(ui)/[slug]/page": "app/(ui)/[slug]/page.js",
   "/(ui)/home/page": "app/(ui)/home/page.js",
+  "/(ui)/[slug]/page": "app/(ui)/[slug]/page.js",
   "/(ui)/usuarios/[user]/page": "app/(ui)/usuarios/[user]/page.js"
 }
