@@ -8,7 +8,7 @@ import { NavLogout } from "../nav/nav-logout";
 import Link from "next/link";
 import { removerAspas } from "@/app/removeAspas";
 import { useEffect, useState } from "react";
-import { Notificacao } from "@/types/twiterTypes";
+import { Notificacao, User } from "@/types/twiterTypes";
 
 type Props = {
     closeAction: () => void;
@@ -19,6 +19,8 @@ export const HomeMenu = ({ closeAction }: Props) => {
 
 
 const [notification, setNotification] = useState<Notificacao[]>([]);
+
+const [ user, setUser ] = useState<User>();
 
 
 
@@ -50,6 +52,7 @@ const [notification, setNotification] = useState<Notificacao[]>([]);
         const data = await response.json();
         console.log(data);
         setNotification(data);
+        setUser(data);
 
       } catch (error) {
         console.log(error + " Error detectado!!! ");
@@ -81,7 +84,7 @@ const [notification, setNotification] = useState<Notificacao[]>([]);
                 />
 
                 
-                <Link href={`/edit`}>
+                <Link href={`/${user?.nome}`}>
                     <NavItem
                         icon={faUser}
                         label="Meu perfil"
